@@ -5379,7 +5379,7 @@ function mapCategoryToBadge(category) {
   return categoryMap[category?.toLowerCase()] || 'Other';
 }
 
-const host = DEMO_LOGIN_ENABLED ? '127.0.0.1' : '0.0.0.0';
+const host = process.env.NODE_ENV === 'production' ? '0.0.0.0' : (DEMO_LOGIN_ENABLED ? '127.0.0.1' : '0.0.0.0');
 
 app.listen(port, host, () => {
   console.log(`WedFlow CRM Backend running on port ${port}`);
