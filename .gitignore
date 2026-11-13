@@ -1,0 +1,98 @@
+# ==============================
+# Node modules (backend + frontend, any depth)
+# ==============================
+node_modules/
+backend/node_modules/
+Frontend/node_modules/
+
+# ==============================
+# Environment files
+# ==============================
+.env
+*.env
+backend/.env
+Frontend/.env
+!.env.example
+!*.env.example
+
+# ==============================
+# Logs
+# ==============================
+*.log
+npm-debug.log*
+yarn-error.log*
+yarn-debug.log*
+pnpm-debug.log*
+backend/*.log
+Frontend/*.log
+
+# ==============================
+# Build / compiled output
+# ==============================
+/dist
+/tmp
+/out-tsc
+/bazel-out
+backend/dist/
+backend/build/
+Frontend/dist/
+Frontend/.angular/cache/
+Frontend/tmp/
+photo-delivery/.next/
+photo-delivery/node_modules/
+
+# ==============================
+# Angular specific
+# ==============================
+/.angular/cache
+Frontend/.angular/
+
+# ==============================
+# IDEs and editors
+# ==============================
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/mcp.json
+.history/*
+
+# ==============================
+# Testing / coverage
+# ==============================
+/coverage
+Frontend/coverage/
+backend/coverage/
+testem.log
+
+# ==============================
+# Miscellaneous
+# ==============================
+.sass-cache/
+/connect.lock
+/libpeerconnection.log
+/typings
+__screenshots__/
+
+# ==============================
+# System files
+# ==============================
+.DS_Store
+Thumbs.db
+
+# Environment files
+backend/.env
+*.env
+backend/node_modules
+frontend/node_modules
+frontend/.angular/cache

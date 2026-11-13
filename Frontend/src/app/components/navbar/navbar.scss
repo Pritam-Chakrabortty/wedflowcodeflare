@@ -1,0 +1,142 @@
+.navbar {
+    position: relative;
+    top: 0px;
+    z-index: 100;
+    padding: 0px 2.5rem;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(rgba(0, 0, 0, 0.76) 0%, rgba(0, 0, 0, 0.34) 72%, rgba(0, 0, 0, 0) 100%);
+    backdrop-filter: blur(18px);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.08);
+    box-shadow: rgba(0, 0, 0, 0.26) 0px 24px 52px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    img {
+        width: 58px;
+        height: 58px;
+        object-fit: contain;
+        display: block;
+    }
+}
+
+.wordmark {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 900;
+    font-size: 20px;
+    letter-spacing: 0.08em;
+    line-height: 1;
+    background: linear-gradient(110deg, rgb(255, 255, 255) 0%, rgb(255, 224, 102) 38%, rgb(212, 175, 55) 68%, rgb(255, 247, 204) 100%) text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: rgba(212, 175, 55, 0.2) 0px 0px 22px;
+    display: flex;
+    gap: 10px;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    .secondary-btn {
+        padding: 13px 18px;
+        border-radius: 8px;
+        font-weight: 700;
+        font-size: 12px;
+        background: rgba(255, 255, 255, 0.04);
+        color: rgb(255, 224, 102);
+        border: 1px solid rgba(212, 175, 55, 0.28);
+        cursor: pointer;
+        white-space: nowrap;
+    }
+
+    .secondary-btn:hover{
+        border-color: rgba(212, 175, 55, 0.42) !important;
+        box-shadow: 0 0 24px rgba(212, 175, 55, 0.16);
+    }
+
+    .primary-btn {
+        padding: 15px 26px;
+        border-radius: 8px;
+        font-weight: 700;
+        font-size: 13px;
+        background: linear-gradient(135deg, rgb(184, 134, 11), rgb(212, 175, 55));
+        color: rgb(0, 0, 0);
+        border-width: medium;
+        border-style: none;
+        border-color: currentcolor;
+        border-image: none;
+        cursor: pointer;
+        box-shadow: rgba(212, 175, 55, 0.267) 0px 0px 20px;
+        letter-spacing: 0.02em;
+        animation: wedflowGlowPulse 2.4s ease-in-out infinite;
+    }
+}
+
+.wf-button {
+    position: relative;
+    overflow: hidden;
+    /* shine বাটনের বাইরে বেরিয়ে যাবে না */
+}
+
+.wf-button::after {
+    content: "";
+    position: absolute;
+    inset: -45% auto -45% -55%;
+    width: 45px;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.42),
+            transparent);
+    filter: blur(1px);
+    pointer-events: none;
+    animation: wedflowButtonShine 3.6s ease-in-out infinite;
+}
+
+@media (max-width: 820px) {
+    .navbar {
+        padding: 0 14px !important;
+        gap: 10px;
+        height: 62px !important;
+    }
+    .brand{
+          flex: 1;
+    min-width: 0;
+    gap: 8px !important;
+
+    img{
+          width: 42px !important;
+    height: 42px !important;
+    }
+    }
+
+    .wordmark{
+      span{
+        font-size: 13px !important;
+        letter-spacing: 0.03em !important;
+      }
+      span:last-child {
+        margin-left: 4px !important;
+    }
+    }
+
+    .secondary-btn{
+          padding: 8px 10px !important;
+    min-height: 40px !important;
+    font-size: 10px !important;
+    flex-shrink: 0;
+    }
+
+    .primary-btn{
+          padding: 8px 12px !important;
+    min-height: 40px !important;
+    font-size: 11px !important;
+    flex-shrink: 0;
+    }
+}

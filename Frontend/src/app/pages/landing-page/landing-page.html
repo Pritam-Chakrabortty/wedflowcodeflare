@@ -1,0 +1,10 @@
+<app-navbar></app-navbar>
+<app-hero (openEnquiryRequested)="openEnquiryModal()"></app-hero>
+<app-stats-section></app-stats-section>
+<app-pricing></app-pricing>
+<app-features></app-features>
+<app-cta></app-cta>
+<app-footer></app-footer>
+
+<app-enquiry-modal [(isOpen)]="enquiryModalOpen" (submitted)="onEnquirySubmitted()"></app-enquiry-modal>
+<app-toast [visible]="toastVisible()" (closed)="onToastClosed()"></app-toast>
